@@ -59,7 +59,7 @@ function updateTime() {
   currentTimeElement.textContent = `${hours}:${minutes}:${seconds}`;
 
   // Check if the current date and time matches the desired date and time
-  const desiredDate = new Date("2024-10-17T18:42:30"); // Example: October 22, 2024, 15:30:00 (3:30 PM)
+  const desiredDate = new Date("2024-10-21T23:50:00"); // Example: October 22, 2024, 15:30:00 (3:30 PM)
   if (
     now.getFullYear() === desiredDate.getFullYear() &&
     now.getMonth() === desiredDate.getMonth() &&
