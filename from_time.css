@@ -25,8 +25,64 @@
     font-weight: bold;
     color: #555;
 }
+.time-content button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    margin-top: 10px;
+    border-radius: 24px; /* Slightly rounded corners */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
 
+.time-content button:hover {
+    background-color: #1c72cd; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+}
+.hidden {
+    display: none;
+}
 
+.cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    justify-content: center;
+    gap: 20px; /* Add space between cards */
+    margin: 50px; /* Add some space from the buttons above */
+}
+
+.card {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 15px; /* Add padding inside the card */
+    width: calc(30% - 10px); /* Set width to 50% of the container width minus gap */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    text-align: center; /* Center-align the text */
+    transition: transform 0.3s ease; /* Add a hover effect */
+    border: 1px solid rgb(28, 92, 220);
+}
+.card p{
+    font-size: 15px;
+}
+.card:hover {
+    transform: scale(1.05); /* Slightly increase the card size on hover */
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
 
 .meme-scroll-title{
     font-size: 30px;

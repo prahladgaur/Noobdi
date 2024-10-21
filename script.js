@@ -57,74 +57,46 @@ function updateTime() {
 
   // Update the content of the h1 element
   currentTimeElement.textContent = `${hours}:${minutes}:${seconds}`;
+}
 
-  // Check if the current date and time matches the desired date and time
-  const desiredDate = new Date("2024-10-21T23:50:00"); // Example: October 22, 2024, 15:30:00 (3:30 PM)
-  if (
-    now.getFullYear() === desiredDate.getFullYear() &&
-    now.getMonth() === desiredDate.getMonth() &&
-    now.getDate() === desiredDate.getDate() &&
-    now.getHours() === desiredDate.getHours() &&
-    now.getMinutes() === desiredDate.getMinutes() &&
-    now.getSeconds() === desiredDate.getSeconds()
-  ) {
-    enableWatchButton(); // Call function to enable the button
+document.getElementById("notes-button").addEventListener("click", function() {
+  const cardsContainer = document.getElementById("cards-container");
+  
+  // Toggle the display of the cards
+  if (cardsContainer.style.display === "none") {
+      cardsContainer.style.display = "flex";
+  } else {
+      cardsContainer.style.display = "none";
   }
+});
+
+// Function to show the carousel
+function showCarousel() {
+  const carousel = document.getElementById("carousel-container");
+  carousel.classList.remove("hidden");
 }
 
-function enableWatchButton() {
-    const watchButton = document.getElementById('watch-video-button');
-    watchButton.disabled = false;
-    watchButton.addEventListener('click', showVideo);
-}
+// Button to open the carousel
+document.getElementById("notes-button").addEventListener('click', showCarousel);
 
-function showVideo() {
-    // Create a new div element
-    const videoContainer = document.createElement('div');
-    videoContainer.id = 'video-container';
-    videoContainer.style.position = 'fixed';
-    videoContainer.style.top = '50%';
-    videoContainer.style.left = '50%';
-    videoContainer.style.transform = 'translate(-50%, -50%)';
-    videoContainer.style.zIndex = '1000';
-    videoContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-    videoContainer.style.padding = '20px';
-    videoContainer.style.borderRadius = '10px';
+// Close button for the carousel
+document.getElementById("close-carousel").addEventListener('click', () => {
+  const carousel = document.getElementById("carousel-container");
+  carousel.classList.add("hidden");
+});
 
-    // Create the video element
-    const videoElement = document.createElement('video');
-    videoElement.src = './images/video/video.mp4'; // Replace with your actual video file path
-    videoElement.autoplay = true;
-    videoElement.controls = true;
-    videoElement.style.width = '600px'; // Adjust as needed
-    videoElement.style.height = 'auto';
+// Function to handle hover music play and pause
+const hoverMusicButton = document.getElementById("hover-music-button");
+const hoverMusicAudio = document.getElementById("hover-music");
 
-    // Create a close button
-    const closeButton = document.createElement('button');
-    closeButton.textContent = 'X';
-    closeButton.style.position = 'absolute';
-    closeButton.style.top = '5px';
-    closeButton.style.right = '5px';
-    closeButton.style.backgroundColor = 'red';
-    closeButton.style.color = 'white';
-    closeButton.style.border = 'none';
-    closeButton.style.cursor = 'pointer';
-    closeButton.style.borderRadius = '50%';
-    closeButton.style.width = '30px';
-    closeButton.style.height = '30px';
+hoverMusicButton.addEventListener('mouseover', () => {
+  hoverMusicAudio.play();
+});
 
-    // Add click event to close the video popup
-    closeButton.addEventListener('click', () => {
-        document.body.removeChild(videoContainer);
-    });
-
-    // Append the video and close button to the container
-    videoContainer.appendChild(videoElement);
-    videoContainer.appendChild(closeButton);
-
-    // Append the container to the body
-    document.body.appendChild(videoContainer);
-}
+hoverMusicButton.addEventListener('mouseout', () => {
+  hoverMusicAudio.pause();
+  hoverMusicAudio.currentTime = 0; // Reset audio to the beginning
+});
 
 // Update the time every second
 setInterval(updateTime, 1000);

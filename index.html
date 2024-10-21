@@ -176,7 +176,8 @@
                             <div>
                                 <h3>Always has a dream in corporate</h3>
                                 <p>The day - jab usne IT department me jaane ka
-                                    decide kiya, and did hard to achieve that
+                                    decide kiya, and did hard work to achieve
+                                    that
                                     success as soon as possible. The day when
                                     she dreamt for her passion.</p>
                             </div>
@@ -308,11 +309,60 @@
         <section class="block time-section">
             <div class="time-content">
                 <h1 id="current-time">--:--:--</h1>
-                <!-- Placeholder for actual time -->
                 <p>22-10 - finally, she wished for</p>
-                <button id="watch-video-button" disabled>Watch Video</button>
+                <button id="notes-button">Notes to My Friend</button>
+                <!-- Always enabled -->
+                <button id="hover-music-button">Hover for Music</button>
             </div>
+
+            <!-- Hidden audio element for hover music -->
+            <audio id="hover-music" src="./images/sound/sound.m4a"></audio>
+
         </section>
+
+        <section> <div id="carousel-container" class="carousel hidden">
+                <div id="cards-container" class="cards" style="display: none;">
+                    <div class="card">
+                        <p>Some friends aren't just friends; they're the peace
+                            of your heart. They bring a sense of calm, comfort,
+                            and understanding that no one else can. Life feels
+                            less chaotic with them, and even during the toughest
+                            moments, their presence offers a quiet peace.
+                            Whether it's a few reassuring words or a silent hug,
+                            these friends are more than companions-they're the
+                            soothing rhythm that steadies your heart when the
+                            world feels overwhelming.</p>
+                    </div>
+
+                    <div class="card">
+                        <p>Dear Friend,<br>
+                            Sometimes, we don't realize how precious our
+                            moments are until they become cherished memories.
+                            The spontaneous adventures, and
+                            laughter that we didn't think much of at the time
+                            but
+                            now mean everything to me. Let's cherish every
+                            second,
+                            every laugh, and every adventure-because one day,
+                            we'll look back and realize these were the moments
+                            that made us. Thank you for being part of my story.
+                            Let's keep making memories, my dear friend.</p>
+                    </div>
+                    <div class="card">
+                        <p>Even with so many contacts on my phone, I
+                            still call only two people when I'm feeling
+                            down-my best friends. They're my
+                            favorite people, always there for me,
+                            listening without judgment and comforting
+                            me when needed. No matter what I'm going
+                            through, they're just a call away, ready to
+                            offer support and love and remind me that
+                            I'm never alone. These friendships mean the
+                            world to me, and I treasure them deeply</p>
+                    </div>
+                </div>
+                <button id="close-carousel" class="close-button">X</button>
+            </div></section>
 
         <!--Memescroll-->
         <div class="block meme-scroll-title">Mandatory Birthday Reactions</div>
@@ -353,20 +403,28 @@
             <h2>Happy Customers after talking to Senior Technical Support</h2>
             <div class="customer-cards">
                 <div class="block customer-card orange">
-                    <p>“Ye kis Noobdi ko TS bana diya re, aata jata kuch h nhi, ab to company ka doobna pakka h.”</p>
-                    <div class="customer-name">Shatakshi's Friend, Tagged as Noobda by her</div>
+                    <p>“Ye kis Noobdi ko TS bana diya re, aata jata kuch h nhi,
+                        ab to company ka doobna pakka h.”</p>
+                    <div class="customer-name">Shatakshi's Friend, Tagged as
+                        Noobda by her</div>
                 </div>
                 <div class="block customer-card blue">
-                    <p>“TS to theek h, but thodi pagal si h, kuch bhi bolti h, but theek h, dost h vo meri”</p>
-                    <div class="customer-name">Chimkandi of the year, Arya Nair </div>
+                    <p>“TS to theek h, but thodi pagal si h, kuch bhi bolti h,
+                        but theek h, dost h vo meri”</p>
+                    <div class="customer-name">Chimkandi of the year, Arya Nair
+                    </div>
                 </div>
                 <div class="block customer-card blue">
-                    <p>“Dhakkan to bhai dhakkan h, kaise samjhau use, busy tha, nhi dekh paya message, bhool gaya”</p>
-                    <div class="customer-name">Luckiest person of the time, Satya Bhaiya</div>
+                    <p>“Dhakkan to bhai dhakkan h, kaise samjhau use, busy tha,
+                        nhi dekh paya message, bhool gaya”</p>
+                    <div class="customer-name">Luckiest person of the time,
+                        Satya Bhaiya</div>
                 </div>
                 <div class="block customer-card orange">
-                    <p>“Ab apni kya tareef karu, uper wale se na daru, because uper wala dost h apna😂!”</p>
-                    <div class="customer-name">Noobdi as Dell employee of the year.</div>
+                    <p>“Ab apni kya tareef karu, uper wale se na daru, because
+                        uper wala dost h apna😂!”</p>
+                    <div class="customer-name">Noobdi as Dell employee of the
+                        year.</div>
                 </div>
             </div>
         </section>
@@ -376,81 +434,132 @@
             <h2>Team Noobdes+</h2>
             <div class="grid-container">
                 <div class="grid-item">
-                    <img src="./images/motu/motu.png" alt="Member 1" onmouseover="playSound('audio1')" onmouseout="pauseSound('audio1')" onclick="pauseSound('audio1')">
+                    <img src="./images/motu/motu.png" alt="Member 1"
+                        onmouseover="playSound('audio1')"
+                        onmouseout="pauseSound('audio1')"
+                        onclick="pauseSound('audio1')">
                     <audio id="audio1" src="./images/sound/sound1.ogg"></audio>
                 </div>
-            
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic.png" alt="Member 2" onmouseover="playSound('audio2')" onmouseout="pauseSound('audio2')" onclick="pauseSound('audio2')" >
+                    <img src="./images/pics/pic.png" alt="Member 2"
+                        onmouseover="playSound('audio2')"
+                        onmouseout="pauseSound('audio2')"
+                        onclick="pauseSound('audio2')">
                     <audio id="audio2" src="./images/sound/sound2.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic1.png" alt="Member 3" onmouseover="playSound('audio3')" onmouseout="pauseSound('audio3')" onclick="pauseSound('audio3')">
+                    <img src="./images/pics/pic1.png" alt="Member 3"
+                        onmouseover="playSound('audio3')"
+                        onmouseout="pauseSound('audio3')"
+                        onclick="pauseSound('audio3')">
                     <audio id="audio3" src="./images/sound/sound3.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic2.png" alt="Member 4" onmouseover="playSound('audio4')" onmouseout="pauseSound('audio4')" onclick="pauseSound('audio4')">
+                    <img src="./images/pics/pic2.png" alt="Member 4"
+                        onmouseover="playSound('audio4')"
+                        onmouseout="pauseSound('audio4')"
+                        onclick="pauseSound('audio4')">
                     <audio id="audio4" src="./images/sound/sound4.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic3.png" alt="Member 5" onmouseover="playSound('audio5')" onmouseout="pauseSound('audio5')" onclick="pauseSound('audio5')">
+                    <img src="./images/pics/pic3.png" alt="Member 5"
+                        onmouseover="playSound('audio5')"
+                        onmouseout="pauseSound('audio5')"
+                        onclick="pauseSound('audio5')">
                     <audio id="audio5" src="./images/sound/sound5.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic4.png" alt="Member 6" onmouseover="playSound('audio6')" onmouseout="pauseSound('audio6')" onclick="pauseSound('audio6')">
+                    <img src="./images/pics/pic4.png" alt="Member 6"
+                        onmouseover="playSound('audio6')"
+                        onmouseout="pauseSound('audio6')"
+                        onclick="pauseSound('audio6')">
                     <audio id="audio6" src="./images/sound/sound6.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic5.png" alt="Member 7" onmouseover="playSound('audio7')" onmouseout="pauseSound('audio7')" onclick="pauseSound('audio7')">
+                    <img src="./images/pics/pic5.png" alt="Member 7"
+                        onmouseover="playSound('audio7')"
+                        onmouseout="pauseSound('audio7')"
+                        onclick="pauseSound('audio7')">
                     <audio id="audio7" src="./images/sound/sound7.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic6.png" alt="Member 8" onmouseover="playSound('audio8')" onmouseout="pauseSound('audio8')" onclick="pauseSound('audio8')">
+                    <img src="./images/pics/pic6.png" alt="Member 8"
+                        onmouseover="playSound('audio8')"
+                        onmouseout="pauseSound('audio8')"
+                        onclick="pauseSound('audio8')">
                     <audio id="audio8" src="./images/sound/sound8.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic7.png" alt="Member 9" onmouseover="playSound('audio9')" onmouseout="pauseSound('audio9')" onclick="pauseSound('audio9')">
+                    <img src="./images/pics/pic7.png" alt="Member 9"
+                        onmouseover="playSound('audio9')"
+                        onmouseout="pauseSound('audio9')"
+                        onclick="pauseSound('audio9')">
                     <audio id="audio9" src="./images/sound/sound9.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic8.png" alt="Member 10" onmouseover="playSound('audio10')" onmouseout="pauseSound('audio10')" onclick="pauseSound('audio10')">
-                    <audio id="audio10" src="./images/sound/sound10.ogg"></audio>
+                    <img src="./images/pics/pic8.png" alt="Member 10"
+                        onmouseover="playSound('audio10')"
+                        onmouseout="pauseSound('audio10')"
+                        onclick="pauseSound('audio10')">
+                    <audio id="audio10"
+                        src="./images/sound/sound10.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic9.png" alt="Member 11" onmouseover="playSound('audio11')" onmouseout="pauseSound('audio11')" onclick="pauseSound('audio11')">
-                    <audio id="audio11" src="./images/sound/sound11.ogg"></audio>
+                    <img src="./images/pics/pic9.png" alt="Member 11"
+                        onmouseover="playSound('audio11')"
+                        onmouseout="pauseSound('audio11')"
+                        onclick="pauseSound('audio11')">
+                    <audio id="audio11"
+                        src="./images/sound/sound11.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic10.png" alt="Member 12" onmouseover="playSound('audio12')" onmouseout="pauseSound('audio12')" onclick="pauseSound('audio12')">
-                    <audio id="audio12" src="./images/sound/sound12.ogg"></audio>
+                    <img src="./images/pics/pic10.png" alt="Member 12"
+                        onmouseover="playSound('audio12')"
+                        onmouseout="pauseSound('audio12')"
+                        onclick="pauseSound('audio12')">
+                    <audio id="audio12"
+                        src="./images/sound/sound12.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic11.png" alt="Member 13" onmouseover="playSound('audio13')" onmouseout="pauseSound('audio13')" onclick="pauseSound('audio13')">
-                    <audio id="audio13" src="./images/sound/sound13.ogg"></audio>
+                    <img src="./images/pics/pic11.png" alt="Member 13"
+                        onmouseover="playSound('audio13')"
+                        onmouseout="pauseSound('audio13')"
+                        onclick="pauseSound('audio13')">
+                    <audio id="audio13"
+                        src="./images/sound/sound13.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic12.png" alt="Member 14" onmouseover="playSound('audio14')" onmouseout="pauseSound('audio14')" onclick="pauseSound('audio14')">
-                    <audio id="audio14" src="./images/sound/sound14.ogg"></audio>
+                    <img src="./images/pics/pic12.png" alt="Member 14"
+                        onmouseover="playSound('audio14')"
+                        onmouseout="pauseSound('audio14')"
+                        onclick="pauseSound('audio14')">
+                    <audio id="audio14"
+                        src="./images/sound/sound14.ogg"></audio>
                 </div>
-                
+
                 <div class="grid-item">
-                    <img src="./images/pics/pic13.png" alt="Member 15" onmouseover="playSound('audio15')" onmouseout="pauseSound('audio15')" onclick="pauseSound('audio15')">
-                    <audio id="audio15" src="./images/sound/sound15.ogg"></audio>
+                    <img src="./images/pics/pic13.png" alt="Member 15"
+                        onmouseover="playSound('audio15')"
+                        onmouseout="pauseSound('audio15')"
+                        onclick="pauseSound('audio15')">
+                    <audio id="audio15"
+                        src="./images/sound/sound15.ogg"></audio>
                 </div>
             </div>
-            
+
         </section>
 
         <script src="script.js"></script>
